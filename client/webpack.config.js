@@ -25,16 +25,17 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
-        fingerprints: false,
         inject: true,
-        name: 'Jate',
-        short_name: 'Jate',
+        name: 'JATE',
+        short_name: 'JATE',
         description: 'Enjoy writing your notes!',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
+        display: 'standalone',
+        fingerprints: false,
+        background_color: '#1e1e1e',
+        theme_color: '#1e1e1e',
         start_url: './',
         publicPath: './',
         icons: [
